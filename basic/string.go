@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	//strings()
+	//stringsTest()
 	//bytesTest()
 	//unicodeTest()
 	//pathTest()
@@ -31,7 +31,7 @@ func bytesTest() {
 	fmt.Println(buf.String()) //hello�√
 }
 
-func strings() {
+func stringsTest() {
 	s1 := "hello strings"
 	s2 := "hello strings"
 	compare := strings2.Compare(s1, s2)
@@ -50,12 +50,12 @@ func pathTest() {
 	fmt.Println(abs)
 }
 
-func strconvTest(){
+func strconvTest() {
 	//integer to ascii
 	is := strconv.Itoa(1)
 	fmt.Println(is)
-	fmt.Println(fmt.Sprintf("%d",1))
-	fmt.Println(strconv.FormatInt(523,2))
+	fmt.Println(fmt.Sprintf("%d", 1))
+	fmt.Println(strconv.FormatInt(523, 2))
 	in, _ := strconv.Atoi("523")
 	fmt.Println(in)
 	parseInt, _ := strconv.ParseInt("-523", 10, 11)
