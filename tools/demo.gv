@@ -1,0 +1,5 @@
+digraph {
+"main.A" -> { "main.B" "main.D" };
+"main.B" -> { "main.H" };
+"main.H" -> { "time.Ticker" "main.D" };
+}
