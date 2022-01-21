@@ -2,12 +2,14 @@ module gopl
 
 go 1.17
 
-require github.com/aliyun/aliyun-oss-go-sdk v2.1.10+incompatible
+require (
+	github.com/aliyun/aliyun-oss-go-sdk v2.1.10+incompatible
+	github.com/cheggaaa/pb/v3 v3.0.8
+)
 
 require (
 	github.com/VividCortex/ewma v1.1.1 // indirect
 	github.com/baiyubin/aliyun-sts-go-sdk v0.0.0-20180326062324-cfa1a18b161f // indirect
-	github.com/cheggaaa/pb/v3 v3.0.8 // indirect
 	github.com/fatih/color v1.10.0 // indirect
 	github.com/kr/pretty v0.3.0 // indirect
 	github.com/mattn/go-colorable v0.1.8 // indirect
