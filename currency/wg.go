@@ -23,8 +23,8 @@ func main() {
 		tasks <- taskNo
 	}
 
-	wg.Wait()
 	close(tasks)
+	wg.Wait()
 }
 
 func taskProcessor(tasks chan int, workerNo int) {
