@@ -13,6 +13,12 @@ func main() {
 	for v := range m {
 		fmt.Println(v)
 	}
+	changeMap(m)
+	fmt.Printf("after changeMap\n map %v,len:%d,addr:%p\n", m, len(m), &m)
+	for v := range m {
+		fmt.Println(v)
+	}
+	mapPoint(&m)
 }
 
 func add(m map[string]int) {
@@ -21,4 +27,13 @@ func add(m map[string]int) {
 	m["add"] = 1
 	m["adda"] = 1
 	fmt.Printf("add\n map %v,len:%d,addr:%p\n", m, len(m), m)
+}
+
+func changeMap(m map[string]int) {
+	m = nil
+	fmt.Printf("changeMap\n map %v,len:%d,addr:%p\n", m, len(m), m)
+}
+
+func mapPoint(m *map[string]int) {
+	fmt.Printf("mapPoint:m %p", m)
 }

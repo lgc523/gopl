@@ -21,17 +21,21 @@ func main() {
 			break
 		}
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "charcount: %v\n", err)
+			_, err := fmt.Fprintf(os.Stderr, "charcount: %v\n", err)
+			if err != nil {
+				return
+			}
 			os.Exit(1)
 		}
 		if r == unicode.ReplacementChar && n == 1 {
 			invalid++
-			continue
+			//continue
 		}
 		counts[r]++
 		utflen[n]++
 	}
-	fmt.Printf("rune\tcount\n")
+
+	fmt.Printf("rune\tcount\n")g
 	for c, n := range counts {
 		fmt.Printf("%q\t%d\n", c, n)
 	}
