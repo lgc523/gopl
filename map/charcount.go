@@ -10,13 +10,13 @@ import (
 )
 
 func main() {
-	counts := make(map[rune]int)    // counts of Unicode characters
-	var utflen [utf8.UTFMax + 1]int // count of lengths of UTF-8 encodings
-	invalid := 0                    // count of invalid UTF-8 characters
+	counts := make(map[rune]int)
+	var utflen [utf8.UTFMax + 1]int
+	invalid := 0
 
 	in := bufio.NewReader(os.Stdin)
 	for {
-		r, n, err := in.ReadRune() // returns rune, nbytes, error
+		r, n, err := in.ReadRune()
 		if err == io.EOF {
 			break
 		}
